@@ -40,16 +40,6 @@ function onChangeSelect(val) {
             selectOld.removeChild(child);
             child = selectOld.lastElementChild;
         }
-        /*  var len = selectOld.options.length;
-        if (len > 0) {
-          for (i = 0; i < len; i++) {
-            if (selectOld.options[i] != undefined) {
-              if (selectOld.options[i].value != null) {
-                selectOld.remove(i);
-              }
-            }
-          }
-        }*/
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -57,7 +47,7 @@ function onChangeSelect(val) {
                 console.log(JSON.parse(this.responseText) + "  " + val);
                 var option = JSON.parse(this.responseText);
 
-                for (var i = 0; i < option.length; i++) {
+                for (var     i = 0; i < option.length; i++) {
                     var opt = option[i];
                     var el = document.createElement("option");
                     el.textContent = opt;

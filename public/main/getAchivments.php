@@ -19,7 +19,8 @@ if ($q !== "") {
     $result1 = mysqli_query($conn, $query1)
     or die(mysqli_error($conn));
     while ($row1 = mysqli_fetch_array($result1)) {
-        array_push($hint, $row1['Date_publication']);
+        $d = substr($row1['Description'], 0, 100);
+        array_push($hint, $row1['Date_publication'] . ' ' . $d);
 
         /*$hint .= $row1['id_picture'];*/
     }

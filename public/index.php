@@ -10,9 +10,12 @@
             rel="stylesheet"
             type="text/css"
     />
-    <script src="../js/main.js"></script>
+    <script src="../js/main.js">
+    </script>
 </head>
 <body>
+<main>
 <?php require_once("./programmer.php")?>
+</main>
 </body>
 </html>
